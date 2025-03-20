@@ -1,0 +1,25 @@
+{
+  "name": "cypress-automation-swag-labs",
+  "version": "1.0.0",
+  "description": "This is a cypress test automation peoject for demo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Milroy Perera",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hmilroy/Cypress-Automation-Swag-Labs.git"
+  },
+  "keywords": [
+    "Cypress"
+  ],
+  "bugs": {
+    "url": "https://github.com/hmilroy/Cypress-Automation-Swag-Labs/issues"
+  },
+  "homepage": "https://github.com/hmilroy/Cypress-Automation-Swag-Labs#readme",
+  "devDependencies": {
+    "cypress": "^14.2.0"
+  }
+}

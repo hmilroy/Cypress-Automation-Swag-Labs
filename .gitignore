@@ -1,0 +1,30 @@
+# Node modules
+node_modules/
+package-lock.json
+yarn.lock
+
+# Cypress binary cache
+cypress/cache/
+cypress/screenshots/
+cypress/videos/
+
+# Cypress configuration and generated files
+cypress/downloads/
+cypress/results/
+cypress/reports/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Environment and config files
+.env
+cypress.env.json
+
+# IDE and OS-specific files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
