@@ -1,6 +1,16 @@
 /// <reference types="cypress" />
 
-const loginElements = require('../../page-objects/page-elements/login-page-elements.json');
+import LoginPageActions from "../../page-objects/page-actions/login-page-actions";
+const loginElements = require("../../page-objects/page-elements/login-page-elements.json");
+
+const loginPageActions = new LoginPageActions();
+let loginData;
+
+before(() => {
+  cy.fixture("login-data").then((data) => {
+    loginData = data;
+  });
+});
 
 describe("example to-do app", () => {
   beforeEach(() => {
@@ -8,6 +18,7 @@ describe("example to-do app", () => {
   });
 
   it("Verify Login Page elements", () => {
+    //// Test Assertions
     cy.get(loginElements.loginLogo).should("have.text", "Swag Labs");
     cy.get(loginElements.userName).should("exist");
     cy.get(loginElements.password).should("exist");
@@ -15,14 +26,19 @@ describe("example to-do app", () => {
   });
 
   it("Verify User can login with correct credentials", () => {
-    cy.get('[data-test="username"]').type('standard_user');
-    cy.get('[data-test="password"]').type('secret_sauce');
-    cy.get('[data-test="login-button"]').click();
-    cy.get('[data-test="title"]').should('have.text','Products')
+    //Login Test
+    loginPageActions.typeUserName(loginData.userName);
+    loginPageActions.typePassword(loginData.password);
+    loginPageActions.clickLoginButton();
+    // cy.get(loginElements.userName).type(loginData.userName);
+    //cy.get(loginElements.password).type(loginData.password);
+   // cy.get(loginElements.loginButton).click();
+
+    // Test Assertions
+    cy.location("pathname").should("equal", "/inventory.html");
+    cy.get(loginElements.titleProduct).should("have.text", "Products");
   });
 
-  // Then, we use `should` to assert that there are two matched items,
-  // // which are the two default items.
   // cy.get('.todo-list li').should('have.length', 2)
   //cy.wait(50000)
 

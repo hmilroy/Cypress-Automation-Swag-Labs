@@ -2,5 +2,6 @@
   "loginLogo": ".login_logo",
   "userName": "[data-test='username']",
   "password": "[data-test='password']",
-  "loginButton": "[data-test='login-button']"
+  "loginButton": "[data-test='login-button']",
+  "titleProduct": "[data-test='title']"
 }
