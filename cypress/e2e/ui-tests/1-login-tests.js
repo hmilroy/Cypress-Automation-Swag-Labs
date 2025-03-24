@@ -12,7 +12,7 @@ before(() => {
   });
 });
 
-describe("example to-do app", () => {
+describe("Login page", () => {
   beforeEach(() => {
     cy.visit("https://www.saucedemo.com/");
   });
@@ -25,15 +25,35 @@ describe("example to-do app", () => {
     cy.get(loginElements.loginButton).should("exist");
   });
 
+  //Here I have wrote same login test in different ways.
+  // Type 01: Straightforward Cypress code using hardcoded values.
+  it("Verify User can login with correct credentials", () => {
+    //Login Test
+    cy.get('[data-test="username"]').type("standard_user");
+    cy.get('[data-test="password"]').type("secret_sauce");
+    cy.get('[data-test="login-button"]').click();
+    // Test Assertions
+    cy.location("pathname").should("equal", "/inventory.html");
+    cy.get('[data-test="title"]').should("have.text", "Products");
+  });
+
+  // Type 02: Using reusable element locators and fixture test data.
+  it("Verify User can login with correct credentials", () => {
+    //Login Test
+    cy.get(loginElements.userName).type(loginData.userName);
+    cy.get(loginElements.password).type(loginData.password);
+    cy.get(loginElements.loginButton).click();
+    // Test Assertions
+    cy.location("pathname").should("equal", "/inventory.html");
+    cy.get(loginElements.titleProduct).should("have.text", "Products");
+  });
+
+  // Type 03: Using a Page Object Model for a more modular approach. (user friendly and reuseable)
   it("Verify User can login with correct credentials", () => {
     //Login Test
     loginPageActions.typeUserName(loginData.userName);
     loginPageActions.typePassword(loginData.password);
     loginPageActions.clickLoginButton();
-    // cy.get(loginElements.userName).type(loginData.userName);
-    //cy.get(loginElements.password).type(loginData.password);
-   // cy.get(loginElements.loginButton).click();
-
     // Test Assertions
     cy.location("pathname").should("equal", "/inventory.html");
     cy.get(loginElements.titleProduct).should("have.text", "Products");

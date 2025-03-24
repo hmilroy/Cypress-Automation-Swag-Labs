@@ -14,5 +14,11 @@ class LoginPageActions {
   clickLoginButton() {
     cy.get(loginElements.loginButton).click();
   }
+
+  loginFunction(username, password) {
+    this.typeUserName(username);
+    this.typePassword(password);
+    this.clickLoginButton();
+  }
 }
 export default LoginPageActions;
