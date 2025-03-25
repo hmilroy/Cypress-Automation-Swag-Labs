@@ -2,8 +2,8 @@ name: Run Cypress Tests Daily
 
 on:
   schedule:
-    - cron: "0 6 * * *" # Every day at 6 AM UTC
-  workflow_dispatch: # Optional: manual trigger via GitHub
+    - cron: "0 6 * * *"  # Every day at 6 AM UTC
+  workflow_dispatch:       # Optional: manual trigger via GitHub
 
 jobs:
   run-cypress-tests:
@@ -37,3 +37,14 @@ jobs:
         with:
           name: cypress-videos
           path: cypress/videos
+
+      - name: Append timestamp to log file
+        run: echo "Last run: $(date -u)" >> last-run.txt
+
+      - name: Commit and push timestamp
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add last-run.txt
+          git commit -m "Daily test log update - $(date -u)" || echo "No changes to commit"
+          git push
