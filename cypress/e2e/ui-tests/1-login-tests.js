@@ -60,7 +60,6 @@ describe("Login page", () => {
   });
 
   // cy.get('.todo-list li').should('have.length', 2)
-  //cy.wait(50000)
 
   // // We can go even further and check that the default todos each contain
   // // the correct text. We use the `first` and `last` functions
