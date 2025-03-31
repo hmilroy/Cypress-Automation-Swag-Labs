@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","888","User Login Test Type 02: Using reusable element locators and fixture test data.","","Mon Mar 31 15:09:25 EEST 2025","passed","Mon Mar 31 15:09:26 EEST 2025","","Login page","",""
+"","1085","Verify product details","","Mon Mar 31 15:09:28 EEST 2025","passed","Mon Mar 31 15:09:29 EEST 2025","","Products Page","",""
+"","753","User Login Test Type 01: Straightforward Cypress code using hardcoded values","","Mon Mar 31 15:09:24 EEST 2025","passed","Mon Mar 31 15:09:25 EEST 2025","","Login page","",""
+"","764","User Login Test Type 03: Using a Page Object Model for a more modular approach.","","Mon Mar 31 15:09:26 EEST 2025","passed","Mon Mar 31 15:09:27 EEST 2025","","Login page","",""
+"","1053","Verify Login Page elements","","Mon Mar 31 15:09:23 EEST 2025","passed","Mon Mar 31 15:09:24 EEST 2025","","Login page","",""
