@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/hmilroy/Cypress-Automation-Swag-Labs#readme",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.41.0",
+    "allure-commandline": "^2.33.0",
     "cypress": "^14.2.0"
   }
 }
