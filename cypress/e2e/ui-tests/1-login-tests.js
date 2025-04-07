@@ -85,8 +85,8 @@ describe("Login page", () => {
 //     .find('input[type=checkbox]')
 //     .check()
 
-//   // Again we'll use `contains` to find the <label> element and then use the `parents` command
-//   // to traverse multiple levels up the dom until we find the corresponding <li> element.
+  // Again we'll use `contains` to find the <label> element and then use the `parents` command
+ // to traverse multiple levels up the dom until we find the corresponding <li> element.
 //   // Once we get that element, we can assert that it has the completed class.
 //   cy.contains('Pay electric bill')
 //     .parents('li')
