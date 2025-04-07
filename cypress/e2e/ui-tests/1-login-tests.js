@@ -105,7 +105,7 @@ describe("Login page", () => {
 //       .check()
 
 //   it('can filter for uncompleted tasks', () => {
-//     // We'll click on the "active" button in order to
+     // We'll click on the "active" button in order to
 //     // display only incomplete items
 //     cy.contains('Active').click()
 
