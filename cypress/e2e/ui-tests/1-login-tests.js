@@ -116,7 +116,7 @@ describe("Login page", () => {
 //       .first()
 //       .should('have.text', 'Walk the dog')
 
-//     // For good measure, let's also assert that the task we checked off
+// For good measure, let's also assert that the task we checked off
 //     // does not exist on the page.
 //     cy.contains('Pay electric bill').should('not.exist')
 //   })
