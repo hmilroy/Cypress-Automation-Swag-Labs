@@ -123,7 +123,7 @@ describe("Login page", () => {
 
 //   it('can filter for completed tasks', () => {
 // We can perform similar steps as the test above to ensure
-//     // that only completed tasks are shown
+// that only completed tasks are shown
 //     cy.contains('Completed').click()
 
 //     cy.get('.todo-list li')
