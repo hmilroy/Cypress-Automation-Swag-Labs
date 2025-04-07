@@ -85,8 +85,8 @@ describe("Login page", () => {
 //     .find('input[type=checkbox]')
 //     .check()
 
-  // Again we'll use `contains` to find the <label> element and then use the `parents` command
- // to traverse multiple levels up the dom until we find the corresponding <li> element.
+// Again we'll use `contains` to find the <label> element and then use the `parents` command
+// to traverse multiple levels up the dom until we find the corresponding <li> element.
 //   // Once we get that element, we can assert that it has the completed class.
 //   cy.contains('Pay electric bill')
 //     .parents('li')
@@ -105,7 +105,7 @@ describe("Login page", () => {
 //       .check()
 
 //   it('can filter for uncompleted tasks', () => {
-     // We'll click on the "active" button in order to
+// We'll click on the "active" button in order to
 //     // display only incomplete items
 //     cy.contains('Active').click()
 
@@ -122,7 +122,7 @@ describe("Login page", () => {
 //   })
 
 //   it('can filter for completed tasks', () => {
-//     // We can perform similar steps as the test above to ensure
+// We can perform similar steps as the test above to ensure
 //     // that only completed tasks are shown
 //     cy.contains('Completed').click()
 
@@ -139,4 +139,3 @@ describe("Login page", () => {
 //     cy.get('.todo-list li')
 //       .should('have.length', 1)
 //       .should('not.have.text', 'Pay electric bill')
-
